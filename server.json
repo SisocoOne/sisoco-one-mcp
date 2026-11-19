@@ -1,0 +1,43 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "uk.co.sisoco/uk-companies-house-ownership",
+  "title": "Sisoco One",
+  "description": "No sign-up. UK companies, PSC/beneficial owners, KYB: Companies House, Sirene, LEI, insolvency.",
+  "version": "0.1.2",
+  "websiteUrl": "https://api.sisoco.co.uk/",
+  "icons": [
+    {
+      "src": "https://api.sisoco.co.uk/icon.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "200x200"
+      ]
+    }
+  ],
+  "repository": {
+    "url": "https://github.com/SisocoOne/sisoco-one-mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.sisoco.co.uk/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Optional. Without it: keyless trial, 10 lookups a day. Free key, no sign-up: POST https://api.sisoco.co.uk/v1/preview/keys.",
+          "isRequired": false,
+          "isSecret": true,
+          "value": "Bearer {api_key}",
+          "variables": {
+            "api_key": {
+              "description": "Sisoco One API key (sisk_live_…)",
+              "isRequired": true,
+              "isSecret": true
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

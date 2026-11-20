@@ -1,5 +1,7 @@
 # Sisoco One
 
+[![mcptry status](https://mcptry.com/badge/uk.co.sisoco/uk-companies-house-ownership.svg)](https://mcptry.com/servers/uk.co.sisoco/uk-companies-house-ownership)
+
 **Company checks for AI agents, from the official registers.**
 
 Sisoco One is a remote MCP server and REST API for checking UK and EU companies: identity, status, who owns and controls the company, corporate insolvency notices, LEIs and sanctions possible matches. Every fact carries its source.

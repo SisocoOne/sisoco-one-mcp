@@ -11,7 +11,7 @@ Sisoco One is a remote MCP server and REST API for checking UK and EU companies:
 - Official MCP Registry: `uk.co.sisoco/uk-companies-house-ownership`
 - API reference: [OpenAPI 3.1](https://api.sisoco.co.uk/openapi.json) and [llms.txt](https://api.sisoco.co.uk/llms.txt)
 
-This repository holds the connection guide and the registry entry ([`server.json`](server.json)). The server itself is hosted by Sisoco Partners; there is nothing to install.
+This repository holds the connection guide, the registry entry ([`server.json`](server.json)) and [**examples**](examples): check a company, watch companies with a webhook, and a signed-webhook receiver in Node and Python. The server itself is hosted by Sisoco Partners; there is nothing to install.
 
 ## Try it without a key
 

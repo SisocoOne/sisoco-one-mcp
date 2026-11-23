@@ -2,8 +2,8 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "uk.co.sisoco/uk-companies-house-ownership",
   "title": "Sisoco One",
-  "description": "No sign-up. UK companies, PSC/beneficial owners, KYB: Companies House, Sirene, LEI, insolvency.",
-  "version": "0.1.3",
+  "description": "No sign-up. Check + monitor UK companies, PSC owners, KYB: Companies House, Sirene, LEI, insolvency.",
+  "version": "0.1.4",
   "websiteUrl": "https://api.sisoco.co.uk/",
   "icons": [
     {

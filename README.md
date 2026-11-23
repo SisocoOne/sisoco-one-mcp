@@ -2,9 +2,9 @@
 
 [![mcptry status](https://mcptry.com/badge/uk.co.sisoco/uk-companies-house-ownership.svg)](https://mcptry.com/servers/uk.co.sisoco/uk-companies-house-ownership)
 
-**Company checks for AI agents, from the official registers.**
+**Check and monitor UK and EU companies with your AI agent, from the official registers.**
 
-Sisoco One is a remote MCP server and REST API for checking UK and EU companies: identity, status, who owns and controls the company, corporate insolvency notices, LEIs and sanctions possible matches. Every fact carries its source.
+Sisoco One is a remote MCP server and REST API for checking and monitoring UK and EU companies: identity, status, who owns and controls the company, corporate insolvency notices, LEIs and sanctions possible matches. Your agent can watch hundreds of companies (suppliers, customers, borrowers, holdings) and report what changed. Every fact carries its source.
 
 - Website: https://api.sisoco.co.uk/
 - MCP endpoint (streamable HTTP): `https://api.sisoco.co.uk/mcp`
@@ -69,7 +69,18 @@ claude mcp add --transport http sisoco-one https://api.sisoco.co.uk/mcp \
 | `sisoco_get_lei_parents` | Direct and ultimate parent companies of an LEI, any country (GLEIF Level 2). |
 | `sisoco_recent_events` | What changed on a company recently. |
 
-All tools are read-only. Each costs one lookup, the same as its REST equivalent.
+These are read-only. Each costs one lookup, the same as its REST equivalent.
+
+### Monitoring (account API key)
+
+| Tool | What it does |
+|---|---|
+| `sisoco_watch_many` | Watch a list of companies: up to 100 per call (1,000 per call over the REST API). |
+| `sisoco_watchlist_changes` | What changed across every watched company since a date, or since the last call: insolvency notices, status changes, overdue filings, directors, changes of control, charges, possible sanctions matches, LEI lapses. |
+| `sisoco_watch` / `sisoco_unwatch` | Watch or stop watching one company. |
+| `sisoco_list_watched` | What is watched, and how much of the plan is used. |
+
+Monitoring tools cost no lookups. They need an account API key: a free account watches 25 companies (work email, no card) at https://api.sisoco.co.uk/app. The same changes can be delivered as signed webhooks.
 
 ## What it returns
 
@@ -81,7 +92,7 @@ Free official sources licensed for commercial reuse, including Companies House, 
 
 ## Pricing
 
-Free without a key (25 lookups a day) or with a free key (100 a month). Then 2p a lookup; paid plans and credit packs open after the preview. Details on the [website](https://api.sisoco.co.uk/#pricing).
+Checks: free without a key (25 lookups a day) or with a free key (100 a month), then 2p a lookup. Monitoring: a free account watches 25 companies; paid plans are sized by companies watched, from £29 a month for 500. Details on the [website](https://api.sisoco.co.uk/#pricing).
 
 ## Terms and privacy
 
